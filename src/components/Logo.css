@@ -1,0 +1,125 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border-radius: 4px;
+}
+
+/*
+ * Rəsmi loqo kvadrat işarədir (sarı fon üzərində qara generator + ZM).
+ * Şəkil dəyişdirilmir; yalnız ətrafdakı boş sarı kənar boşluq kəsilərək
+ * işarə kiçik ölçüdə də aydın görünür. Rənglər və nisbətlər orijinaldır.
+ */
+.logo__frame {
+  display: block;
+  width: 56px;
+  height: 56px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+.logo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.2);
+  transform-origin: 50% 46%;
+}
+.logo--lg .logo__frame {
+  width: 88px;
+  height: 88px;
+  border-radius: 10px;
+}
+
+/* Şirkət adı: ZAMANLI (ağ) / MAKİNA (sarı) */
+.logo {
+  gap: 14px;
+}
+.logo--lg {
+  gap: 18px;
+}
+.logo__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.92;
+  letter-spacing: 0.07em;
+  font-size: 1.6rem;
+  white-space: nowrap;
+}
+.logo__name b,
+.logo__name i {
+  display: block;
+  font: inherit;
+  font-style: normal;
+}
+.logo__name b {
+  color: var(--white);
+}
+.logo__name i {
+  color: var(--yellow);
+  /* MAKİNA 6 hərfdir, ZAMANLI 7 — eni bərabərləşdirmək üçün yüngül genişləndirmə */
+  letter-spacing: 0.145em;
+}
+.logo--lg .logo__name {
+  font-size: 2.4rem;
+}
+
+@media (min-width: 1600px) {
+  .logo__frame {
+    width: 60px;
+    height: 60px;
+  }
+  .logo__name {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo {
+    gap: 11px;
+  }
+  .logo__name {
+    font-size: 1.4rem;
+  }
+}
+
+/* Müvəqqəti mətn loqosu (rəsmi loqo faylı əlavə olunana qədər) */
+.logo__fallback {
+  display: inline-flex;
+  align-items: stretch;
+  gap: 12px;
+}
+.logo__bar {
+  width: 5px;
+  background: var(--yellow);
+  border-radius: 1px;
+}
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 1;
+}
+.logo__text b {
+  font-weight: 800;
+  font-size: 1.55rem;
+  letter-spacing: 0.06em;
+  color: var(--white);
+}
+.logo__text i {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.42em;
+  color: var(--yellow);
+  margin-top: 3px;
+}
+.logo--lg .logo__text b {
+  font-size: 1.9rem;
+}
