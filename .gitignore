@@ -1,0 +1,34 @@
+# Asılılıqlar və build nəticəsi
+node_modules
+dist
+dist-ssr
+
+# Mühit faylları (yalnız .env.example saxlanılır)
+.env
+.env.*
+!.env.example
+*.local
+
+# TypeScript / alətlər
+tsconfig.tsbuildinfo
+.vite
+coverage
+
+# Jurnallar
+*.log
+npm-debug.log*
+
+# OS və redaktor faylları
+.DS_Store
+Thumbs.db
+.idea
+.vscode
+
+# Local npm cache (when ~/.npm is not writable)
+.npm-cache
+
+# Lokal alət konfiqurasiyası, müvəqqəti test/debug artefaktları
+.claude
+.netlify
+screenshots
+*.tmp
